@@ -24,3 +24,10 @@ Eventually I actually want things like satellite imagery analysis, grain futures
 6:53 PM
 So I do have to install tkinter eg. `sudo apt install python-tk`
 
+9:55 PM
+
+I'm pretty spent now but will make something basic like this
+
+<img src="./devlog-images/basic-ui.JPG"/>
+
+Then will use agents with their own threads
