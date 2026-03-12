@@ -21,3 +21,6 @@ Okay so I'm about to eat dinner in 15 minutes but first thing will be to do some
 
 Eventually I actually want things like satellite imagery analysis, grain futures, stocks, etc..
 
+6:53 PM
+So I do have to install tkinter eg. `sudo apt install python-tk`
+
