@@ -19,6 +19,7 @@ Okay so I'm about to eat dinner in 15 minutes but first thing will be to do some
   - [ ] get regular news
   - [ ] my finances eg. balances from a local DB
   - [ ] weather
+- [ ] dark mode with neon colors
 
 Eventually I actually want things like satellite imagery analysis, grain futures, stocks, etc..
 
