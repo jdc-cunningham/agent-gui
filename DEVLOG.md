@@ -10,7 +10,8 @@ Got this spacious 1920x1080P compared to the 1024x600 laptop screen which is als
 
 Okay so I'm about to eat dinner in 15 minutes but first thing will be to do some preliminary checks.
 
-- [ ] get a Tkinter window opened on this laptop from Python
+- [x] get a Tkinter window opened on this laptop from Python
+- [ ] compile it so it runs as an so file
 - [ ] add some LLM model API keys and get first langchain agent running
 - [ ] come up with an initial UI and build it
 - [ ] come up with workflows
