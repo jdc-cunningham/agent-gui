@@ -25,3 +25,47 @@ class Database:
                 cur.execute("CREATE TABLE agents(name, model_name, prompt, tools, created, last_used)")
             except Exception:
                 print("Failed to create agents table")
+
+    def add_agent(
+        name,
+        model_name,
+        prompt,
+        tools, # array of fcn names
+        created,
+        last_used
+    ):
+        con = self.get_con()
+        cur = self.get_cursor()
+
+        try:
+            cur.execute(
+                "INSERT INTO agents VALUES(?, ?, ?, ?, ?, ?)",
+                [name, model_name, prompt, tools, created, last_used]
+            )
+
+            con.commit()
+        except Exception:
+            print("Row insert failed for agents")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
