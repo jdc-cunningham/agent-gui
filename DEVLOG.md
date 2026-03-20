@@ -17,7 +17,15 @@ Need to setup:
 - [ ] run the agents as threads
 - [ ] show the agent output in the right as separate containers, right panel scrolls
 
+10:14 PM
 
+Made progress, have two panels
+
+Started the DB, still need to actually have it linked together
+
+Make agents, run them... guess I'll be working on this over the weekend too
+
+---
 
 ### 03/11/2026
 
