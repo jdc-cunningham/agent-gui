@@ -1,0 +1,7 @@
+# files
+.env
+.pyc
+*.kate-swp
+
+# folders
+__pycache__
