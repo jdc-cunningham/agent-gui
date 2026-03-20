@@ -2,6 +2,7 @@
 .env
 .pyc
 *.kate-swp
+*.db
 
 # folders
 __pycache__

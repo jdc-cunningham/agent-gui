@@ -11,7 +11,7 @@ class Database:
     def get_cursor(self):
         return self.con.cursor()
 
-    def init_agents_table():
+    def init_agents_table(self):
         cur = self.get_cursor()
         table_exists = False
 
