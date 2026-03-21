@@ -31,8 +31,8 @@ left_label = tk.Label(
     bg="#000",
     fg="white")
 
-left_label.pack(pady=5, side="top", anchor="nw")
-setup_left_panel(leftPane, db)
+left_label.pack(padx=5, pady=5, side="top", anchor="nw")
+setup_left_panel(main_window, leftPane, db)
 
 # setup right panel
 rightPane = tk.Frame(
@@ -54,5 +54,5 @@ right_label = tk.Label(
     bg="#222",
     fg="white")
 
-right_label.pack(pady=5, side="top", anchor="nw")
+right_label.pack(padx=5, pady=5, side="top", anchor="nw")
 main_window.mainloop()

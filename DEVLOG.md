@@ -1,3 +1,36 @@
+### 03/21/2026
+
+9:08 AM
+
+Well I've got like 3 hrs to work on this
+
+I want to wrap this project up today, this agent harness/client thing I'll keep adding stuff to over time if it sticks as something I usage
+
+I mentioned in the video that it's been a while since I started this project, I ordered the first laptop 03/03/2026 and yeah... losing momentum/interest
+
+Still have a ways to go from a usable interface
+
+I'm repeating these but I'll just type them out
+
+- [ ] make a popup modal that can add agents
+ - [ ] make modal
+ - [ ] add button opens modal
+ - [ ] inserts agent into sqlite db
+- [ ] show agents on left side bar
+ - [ ] clicking an agent runs it
+- [ ] run agent
+ - [ ] agent runs in its own thread
+ - [ ] agent has its own pane, scrollable
+ - [ ] can close agents
+
+I am a little distracted today's gonna be fun, first time I fly the Vortex 3 DLG in months and then doing some more photography at new locations
+
+Let me get my coffee and music going
+
+
+
+---
+
 ### 03/19/2026
 
 8:32 PM
