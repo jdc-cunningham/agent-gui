@@ -12,12 +12,14 @@ Still have a ways to go from a usable interface
 
 I'm repeating these but I'll just type them out
 
-- [ ] make a popup modal that can add agents
+- [x] make a popup modal that can add agents
  - [x] make modal
  - [x] add button opens modal
  - [x] create agent detail inputs eg. model, prompt, tools
- - [ ] inserts agent into sqlite db
+ - [x] inserts agent into sqlite db
+  - has no dupe or error checking
 - [ ] show agents on left side bar
+ - [x] get list of agents
  - [ ] clicking an agent runs it
 - [ ] run agent
  - [ ] agent runs in its own thread
@@ -41,6 +43,10 @@ I have an external monitor that I'm using a 22" 1080P screen that helps but stil
 Alright at this point I've got a modal that has the fields
 
 I don't have the save to DB mechanism implemented yet but I've got the show/hide modal part
+
+11:00 AM
+
+I'm going to stop, I want to prep for my day out but made good progress, I'll return to this tonight
 
 ---
 

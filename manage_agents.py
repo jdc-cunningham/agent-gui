@@ -1,7 +1,9 @@
 from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
+from datetime import datetime
 import tkinter as tk
 
+db = None
 main_window = None
 add_agent_modal_visible = False
 add_agent_modal = None
@@ -59,6 +61,24 @@ def show_add_agent_modal():
     def cancel_agent_add():
         add_agent_modal.destroy()
 
+    def add_agent():
+        # get field values
+        agent_name = name_input.get("1.0", "end-1c")
+        agent_model = combo_box.get()
+        agent_prompt = prompt_input.get("1.0", "end-1c")
+        agent_tools = tools_input.get("1.0", "end-1c")
+
+        # insert into db
+        db.add_agent(
+            name=agent_name,
+            model_name=agent_model,
+            prompt=agent_prompt,
+            tools=agent_tools,
+            created=datetime.now(),
+            last_used=""
+        )
+
+
     # buttons
     cancel_button = tk.Button(add_agent_modal, text="Cancel", command=cancel_agent_add)
     cancel_button.place(relx=0.865, rely=0.02)
@@ -73,10 +93,13 @@ def add_agent():
     else:
         show_add_agent_modal()
 
-def setup_left_panel(window, frame, db):
-    global main_window
+def setup_left_panel(window, frame, sqlite_db):
+    global main_window, db
     main_window = window
+    db = sqlite_db
     add_agent_button = tk.Button(frame, text="Add agent", command=add_agent)
     add_agent_button.pack(pady=(520, 0))
 
     # load agents from db
+    db.get_agents()
+

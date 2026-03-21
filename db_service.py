@@ -27,10 +27,11 @@ class Database:
                 print("Failed to create agents table")
 
     def add_agent(
+        self,
         name,
         model_name,
         prompt,
-        tools, # array of fcn names
+        tools, # comma-separated list of fcn names
         created,
         last_used
     ):
@@ -47,7 +48,21 @@ class Database:
         except Exception:
             print("Row insert failed for agents")
 
+    def get_agents(self):
+        con = self.get_con()
+        cur = self.get_cursor()
 
+        try:
+            agents = cur.execute("SELECT * FROM agents")
+            res = agents.fetchall()
+
+            print("get agents")
+            print(res)
+
+            for agent in agents:
+                print(agent)
+        except Exception:
+            print("Row insert failed for agents")
 
 
 
