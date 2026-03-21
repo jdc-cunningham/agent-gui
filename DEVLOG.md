@@ -13,8 +13,9 @@ Still have a ways to go from a usable interface
 I'm repeating these but I'll just type them out
 
 - [ ] make a popup modal that can add agents
- - [ ] make modal
- - [ ] add button opens modal
+ - [x] make modal
+ - [x] add button opens modal
+ - [x] create agent detail inputs eg. model, prompt, tools
  - [ ] inserts agent into sqlite db
 - [ ] show agents on left side bar
  - [ ] clicking an agent runs it
@@ -27,7 +28,19 @@ I am a little distracted today's gonna be fun, first time I fly the Vortex 3 DLG
 
 Let me get my coffee and music going
 
+9:49 AM
 
+Making progress, it's so like slow to work on this tiny laptop and my neck. looking down at it
+
+I have an external monitor that I'm using a 22" 1080P screen that helps but still I can feel my neck aching as I'm looking down at these monitors and this keyboard on the ASUS EEE 1005HA PC squeaks as you type
+
+(insert picture here)
+
+10:34 AM
+
+Alright at this point I've got a modal that has the fields
+
+I don't have the save to DB mechanism implemented yet but I've got the show/hide modal part
 
 ---
 
