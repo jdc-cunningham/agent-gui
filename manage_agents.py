@@ -46,7 +46,7 @@ def show_add_agent_modal():
     # agent prompt
     label = tk.Label(add_agent_modal, text="Agent instructions", bg="#ccc")
     label.pack(padx=0, pady=5)
-    prompt_input = ScrolledText(add_agent_modal, height=5, width=40, wrap=tk.WORD)
+    prompt_input = ScrolledText(add_agent_modal, height=6, width=60, wrap=tk.WORD)
     prompt_input.pack(expand=False, fill="none", padx=0, pady=0)
 
     # tools
@@ -61,9 +61,9 @@ def show_add_agent_modal():
 
     # buttons
     cancel_button = tk.Button(add_agent_modal, text="Cancel", command=cancel_agent_add)
-    cancel_button.place(relx=0.87, rely=0.01)
+    cancel_button.place(relx=0.865, rely=0.02)
     add_button = tk.Button(add_agent_modal, text="Add", command=add_agent)
-    add_button.pack(pady=5)
+    add_button.pack(pady=7)
 
 def add_agent():
     global add_agent_modal_visible
