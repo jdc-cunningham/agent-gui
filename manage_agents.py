@@ -92,6 +92,9 @@ def add_agent():
     else:
         show_add_agent_modal()
 
+def start_agent(name):
+    print("run")
+
 def setup_left_panel(window, left_panel, sqlite_db):
     global main_window, db
     main_window = window
@@ -105,20 +108,30 @@ def setup_left_panel(window, left_panel, sqlite_db):
             left_panel,
             bg="#222",
             width="280",
-            height="100"
+            height="70"
         )
 
         agent_frame.pack_propagate(False)
         agent_frame.pack(padx=0, pady=(2, 0))
 
-        agent_label = tk.Label(
+        agent_name = tk.Label(
             agent_frame,
             text=f"Agent: {agent[0]}",
             bg="#222",
             fg="white"
         )
 
-        agent_label.pack(padx=(5, 0), pady=(2, 0), side="top", anchor="nw")
+        agent_name.pack(padx=(5, 0), pady=(2, 0), side="top", anchor="nw")
+
+        agent_start = tk.Button(
+            agent_frame,
+            text="Start",
+            command=lambda: start_agent(agent[0]),
+            bg="#222",
+            fg="white"
+        )
+
+        agent_start.pack(padx=5, pady=5)
 
     # Add agent button
     add_agent_button = tk.Button(
@@ -129,4 +142,4 @@ def setup_left_panel(window, left_panel, sqlite_db):
         fg="white"
     )
 
-    add_agent_button.place(x=100, y=520)
+    add_agent_button.place(x=100, y=530)

@@ -17,6 +17,46 @@ That may be too much I have like 1.5 hrs
 
 Ugh... for scrollbars need to turn it into a canvas
 
+I'm gonna skip that for now, just have a couple agents for a demo video
+
+I guess can put a button on an agent to start/stop/resume it or something
+
+8:03 PM
+
+Finally getting to the meat of it
+
+I just realized I haven't even tried to install langchain on this computer I mean it runs like python 3.11 so it should work?...
+
+8:07 PM
+
+It's working, taking a bit and fan going nuts ha
+
+8:22 PM
+
+Still going finishing what is missing
+
+I can feel it (sniffs the air) tonight is the night
+
+I'm just thinking about how long it's going to take to render this video
+
+8:31 PM
+
+Damn... the install errored again and I cleared it lmao... so I gotta do it again to find out the error
+
+Still stuck on the pkgconfig problem with numpy and meson
+
+8:40 PM
+
+I need a delete button on the agent so they can be removed
+
+8:52 PM
+
+Damn still waiting on numpy>=1.26.2 lol
+
+It might actually help for me to close Kate so it can build lmao
+
+---
+
 ### 03/21/2026
 
 9:08 AM
