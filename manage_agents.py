@@ -78,7 +78,6 @@ def show_add_agent_modal():
             last_used=""
         )
 
-
     # buttons
     cancel_button = tk.Button(add_agent_modal, text="Cancel", command=cancel_agent_add)
     cancel_button.place(relx=0.865, rely=0.02)
@@ -93,21 +92,41 @@ def add_agent():
     else:
         show_add_agent_modal()
 
-def setup_left_panel(window, frame, sqlite_db):
+def setup_left_panel(window, left_panel, sqlite_db):
     global main_window, db
     main_window = window
     db = sqlite_db
 
+    # load agents from db
+    agents = db.get_agents()
+
+    for agent in agents:
+        agent_frame = tk.Frame(
+            left_panel,
+            bg="#222",
+            width="280",
+            height="100"
+        )
+
+        agent_frame.pack_propagate(False)
+        agent_frame.pack(padx=0, pady=(2, 0))
+
+        agent_label = tk.Label(
+            agent_frame,
+            text=f"Agent: {agent[0]}",
+            bg="#222",
+            fg="white"
+        )
+
+        agent_label.pack(padx=(5, 0), pady=(2, 0), side="top", anchor="nw")
+
+    # Add agent button
     add_agent_button = tk.Button(
-        frame,
+        left_panel,
         text="Add agent",
         command=add_agent,
         bg="#000",
         fg="white"
     )
 
-    add_agent_button.pack(pady=(520, 0))
-
-    # load agents from db
-    db.get_agents()
-
+    add_agent_button.place(x=100, y=520)

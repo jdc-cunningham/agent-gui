@@ -13,6 +13,10 @@ Tonight I think I want to:
 
 That may be too much I have like 1.5 hrs
 
+7:47 PM
+
+Ugh... for scrollbars need to turn it into a canvas
+
 ### 03/21/2026
 
 9:08 AM

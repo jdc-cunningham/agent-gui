@@ -19,7 +19,8 @@ leftPane = tk.Frame(
     highlightcolor="white",
     bd=0,
     relief="flat",
-    width=300)
+    width=300
+)
 
 leftPane.pack_propagate(False)
 leftPane.pack(side="left", fill="both")
@@ -29,7 +30,8 @@ left_label = tk.Label(
     leftPane,
     text="View and create agents",
     bg="#000",
-    fg="white")
+    fg="white"
+)
 
 left_label.pack(padx=5, pady=5, side="top", anchor="nw")
 setup_left_panel(main_window, leftPane, db)
@@ -42,7 +44,8 @@ rightPane = tk.Frame(
     highlightcolor="white",
     bd=0,
     relief="flat",
-    width=724)
+    width=724
+)
 
 rightPane.pack_propagate(False)
 rightPane.pack(side="right", fill="both")
@@ -52,7 +55,8 @@ right_label = tk.Label(
     rightPane,
     text="Running agents",
     bg="#222",
-    fg="white")
+    fg="white"
+)
 
 right_label.pack(padx=5, pady=5, side="top", anchor="nw")
 main_window.mainloop()

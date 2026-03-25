@@ -54,13 +54,7 @@ class Database:
 
         try:
             agents = cur.execute("SELECT * FROM agents")
-            res = agents.fetchall()
-
-            print("get agents")
-            print(res)
-
-            for agent in agents:
-                print(agent)
+            return agents.fetchall()
         except Exception:
             print("Row insert failed for agents")
 
