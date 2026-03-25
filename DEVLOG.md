@@ -55,6 +55,16 @@ Damn still waiting on numpy>=1.26.2 lol
 
 It might actually help for me to close Kate so it can build lmao
 
+11:04 PM
+
+At this point still stuck on trying to install/build numpy
+
+I'm trying to install it through pip
+
+Working on my broken DLG plane in the mean time.
+
+It's possible I will have to build the desktop app on another computer and cross compile it for this one...
+
 ---
 
 ### 03/21/2026
