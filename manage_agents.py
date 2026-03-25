@@ -97,7 +97,15 @@ def setup_left_panel(window, frame, sqlite_db):
     global main_window, db
     main_window = window
     db = sqlite_db
-    add_agent_button = tk.Button(frame, text="Add agent", command=add_agent)
+
+    add_agent_button = tk.Button(
+        frame,
+        text="Add agent",
+        command=add_agent,
+        bg="#000",
+        fg="white"
+    )
+
     add_agent_button.pack(pady=(520, 0))
 
     # load agents from db

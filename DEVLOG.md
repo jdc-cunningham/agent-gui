@@ -1,3 +1,18 @@
+### 03/24/2026
+
+7:27 PM
+
+I really need to wrap this project up, I have other things to do, I keep getting farther away from my original interest in this project too so losing drive
+
+Tonight I think I want to:
+
+- [ ] render the agents on left side
+- [ ] render agents on right side
+- [ ] agent actualy runs
+- [ ] agent can take commands from input box
+
+That may be too much I have like 1.5 hrs
+
 ### 03/21/2026
 
 9:08 AM
