@@ -12,6 +12,7 @@ I'm using Debian 12
 - `$sudo apt install pkg-config build-essential python3-dev python3-tk`
 - `$sudo apt install curl`
 - `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- `$sudo apt install protobuf-compiler`
 
 #### Requirements
 
