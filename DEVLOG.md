@@ -1,3 +1,35 @@
+### 03/26/2026
+
+6:14 PM
+
+Alright this is it, no excuse now
+
+Can run agents
+
+6:27 PM
+
+I'm not sure what the delay is when you first start the call. Hopefully once the agent is running it's not so bad.
+
+6:37 PM
+
+It's funny, I can make this but I don't know what to use it for
+
+Need to look at my notes
+
+6:41 PM
+
+It's interesting even if I don't use the agent stuff right away just importing it makes the startup take longer
+
+So right now I setup a basic function that returns the model API key based on requested model. Also an Agent class that instantiates an agent instance based on provided parameters... basic tools like weather and crypto (lol).
+
+I need to make it work end to end though through the UI
+
+The `run_sync` has me concerned too... maybe it's fine if they're running in separate threads but I may need async await.
+
+
+
+---
+
 ### 03/25/2026
 
 6:38 PM

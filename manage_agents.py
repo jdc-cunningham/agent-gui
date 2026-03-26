@@ -38,7 +38,7 @@ def show_add_agent_modal():
     name_input.pack(padx=0, pady=0)
 
     # agent model selection
-    models = ['gpt-4.1-mini', 'mistarl-medium-2508', 'claude-sonnet-4-6', 'gemini-2.5-flash']
+    models = ['gpt-4.1-mini', 'mistral-medium-2508', 'claude-sonnet-4-6', 'gemini-2.5-flash']
     label = tk.Label(add_agent_modal, text="Select model", bg="#ccc")
     label.pack(padx=5, pady=5)
     combo_box = ttk.Combobox(add_agent_modal, values=models, state="readonly")

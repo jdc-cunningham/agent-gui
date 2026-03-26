@@ -20,6 +20,8 @@ You should see `(.venv)` in your terminal if your virtual environment is activat
 
 Then you can run `$pip install -r requirements.txt`
 
+Please note, it takes around 3-4 hours to install pydantic ai if doing on the Eee PC itself (1005HA). Should probably find another way to get the wheels such as tiktoken, cryptography, etc...
+
 #### Credentials
 
 For model API keys these are stored in a `.env` file
