@@ -1,3 +1,45 @@
+### 03/25/2026
+
+6:38 PM
+
+Okay I skipped the gym, I really need to get this done
+
+Right now langchain is out since I can't get past the numpy problem, maybe possible downloading/using a wheel for 32 bit
+
+I'm going to try pydantic ai since you can spin off agents with that
+
+The worst case I use my own loops (raw code) per agent
+
+7:01 PM
+
+Still working on getting pydantic ai installed
+
+7:29 PM
+
+Damn... still going, says building wheels for temporalio, tiktoken, cryptography, fastavro
+
+10:57 PM
+
+Wow... it finally built, now I have to see if it actually works
+
+11:20 PM
+
+Alright let me finally try to run an agent with pydantic ai
+
+11:36 PM
+
+Well this is great news, I am able to run agents now on this laptop, granted it is remotely through an LLM provider
+
+Anyway... I did notice the CPU spikes when it first runs and there is lag... like 5 seconds or more to start an agent/answer a question.
+
+So that is interesting
+
+Then it drops back down to 30% per core as it idles
+
+But this is great, I can actually build something
+
+---
+
 ### 03/24/2026
 
 7:27 PM

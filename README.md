@@ -2,7 +2,7 @@
 
 #### Python virtual env
 
-- `$python -m venv .venv`
+- `$python3 -m venv .venv`
 - `source .venv/bin/activate`
 
 (may need to run `sudo apt install python3.11-venv`)
@@ -10,6 +10,8 @@
 I'm using Debian 12
 
 - `$sudo apt install pkg-config build-essential python3-dev python3-tk`
+- `$sudo apt install curl`
+- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
 #### Requirements
 

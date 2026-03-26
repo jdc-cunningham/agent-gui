@@ -1,5 +1,6 @@
 from db_service import Database
 from manage_agents import setup_left_panel
+from run_agents import *
 import tkinter as tk
 
 # db
