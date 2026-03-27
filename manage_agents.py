@@ -174,7 +174,8 @@ def render_agent_ui(agent, main):
         height="220"
     )
 
-    agent_ui.place(x=5, y=((len(main.running_agents) - 1) * 200) + 10)
+    y_offset = 30 if len(main.running_agents) == 1 else (((len(main.running_agents) - 1) * 200) + 56)
+    agent_ui.place(x=5, y=y_offset)
 
     add_agent_label = tk.Label(
         agent_ui,
