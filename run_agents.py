@@ -37,7 +37,7 @@ class Agent():
         match model_name:
             case "gpt-4.1-mini":
                 provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
-                return OpenAIChatModel(self.model_Name, provider=provider)
+                return OpenAIChatModel(self.model_name, provider=provider)
             # case "mistral-medium-2508":
             #     provider = MistralProvider(api_key=os.getenv("MISTRAL_API_KEY"))
             #     return MistralModel(self.model_name, provider=provider)

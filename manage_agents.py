@@ -241,4 +241,4 @@ def setup_left_panel(window, left_panel, sqlite_db, main):
         fg="white"
     )
 
-    add_agent_button.place(x=100, y=530)
+    add_agent_button.place(x=100, y=510)
