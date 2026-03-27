@@ -7,8 +7,9 @@ from pydantic_ai.providers.google import GoogleProvider
 from pydantic_ai.models.google import GoogleModel
 from pydantic_ai.providers.openai import OpenAIProvider
 from pydantic_ai.models.openai import OpenAIChatModel
-from pydantic_ai.providers.mistral import MistralProvider
-from pydantic_ai.models.mistral import MistralModel
+# can't find
+# from pydantic_ai.providers.mistral import MistralProvider
+# from pydantic_ai.models.mistral import MistralModel
 import os
 
 load_dotenv()
@@ -23,9 +24,9 @@ def get_model(model_name: str):
         case "gpt-4.1-mini":
             provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
             return OpenAIChatModel(self.model_Name, provider=provider)
-        case "mistral-medium-2508":
-            provider = MistralProvider(api_key=os.getenv("MISTRAL_API_KEY"))
-            return MistralModel(self.model_name, provider=provider)
+        # case "mistral-medium-2508":
+        #     provider = MistralProvider(api_key=os.getenv("MISTRAL_API_KEY"))
+        #     return MistralModel(self.model_name, provider=provider)
         case "claude-sonnet-4-6":
             provider = AnthropicProvider(api_key=os.getenv("ANTHROPIC_API_KEY"))
             return AnthropicModel(self.model_name, provider=provider)
