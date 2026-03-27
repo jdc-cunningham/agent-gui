@@ -28,9 +28,9 @@ The `run_sync` has me concerned too... maybe it's fine if they're running in sep
 
 - [x] create agent
 - [x] shows up on left side
-- [ ] start it
-- [ ] shows up on right side
-- [ ] right side has an output and input
+- [x] start it
+- [x] shows up on right side
+- [x] right side has an output and input
 - [ ] agent responds/updates box
 
 There something concrete
@@ -39,7 +39,23 @@ There something concrete
 
 Man this thing's structure is nasty, I don't have a vision of what it should be so I'm just making things as I think of it
 
+7:52 PM
 
+Making progress but still some work to do
+
+8:02 PM
+
+Agent running, that was interesting having to deal with string to actual function
+
+8:24 PM
+
+OMG the development delay, when I call `python3 main.py` I have to wait 18 seconds for the app to open lmao
+
+Then when I push "start" on an agent I have to wait about 3 seconds for it to start/render on the right panel
+
+9:08 PM
+
+Need to eat, I realized I messed up the model selection part, need to add another dependency oh boy
 
 ---
 

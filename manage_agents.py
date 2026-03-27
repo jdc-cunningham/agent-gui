@@ -1,6 +1,7 @@
+from datetime import datetime
+from run_agents import Agent
 from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
-from datetime import datetime
 import tkinter as tk
 
 db = None
@@ -94,7 +95,7 @@ def render_agent_list(db, left_panel, available_agents, main):
 
     agents = db.get_agents()
 
-    for agent in agents:
+    for index, agent in enumerate(agents):
         agent_frame = tk.Frame(
             left_panel,
             bg="#222",
@@ -111,11 +112,11 @@ def render_agent_list(db, left_panel, available_agents, main):
         }
 
         agent_frame.pack_propagate(False)
-        agent_frame.pack(padx=0, pady=(2, 0))
+        agent_frame.pack(padx=0, pady=(0 if index == 0 else 4, 0))
 
         agent_name = tk.Label(
             agent_frame,
-            text=f"Agent: {agent[0]}",
+            text=agent[0],
             bg="#222",
             fg="white"
         )
@@ -130,7 +131,7 @@ def render_agent_list(db, left_panel, available_agents, main):
             fg="white"
         )
 
-        agent_delete.pack(padx=5, pady=5)
+        agent_delete.place(x=5, y=32)
 
         agent_start = tk.Button(
             agent_frame,
@@ -140,7 +141,7 @@ def render_agent_list(db, left_panel, available_agents, main):
             fg="white"
         )
 
-        agent_start.pack(padx=5, pady=5)
+        agent_start.place(x=82, y=32)
 
 def add_agent(db, left_panel, available_agents, main):
     global add_agent_modal_visible
@@ -165,10 +166,50 @@ def delete_agent(name, main):
 
     agent_info["frame"].destroy()
 
-def start_agent(name, main):
-    global running_agents
+def render_agent_ui(agent, main):
+    agent_ui = tk.Frame(
+        main.right_panel,
+        bg="#444",
+        width="714",
+        height="220"
+    )
 
-    if name not in running_agents:
+    agent_ui.place(x=5, y=((len(main.running_agents) - 1) * 200) + 5)
+
+    add_agent_label = tk.Label(
+        agent_ui,
+        text=f"Agent: {agent.name}",
+        bg="#444",
+        fg="white"
+    )
+
+    add_agent_label.place(x=5, y=5)
+
+    # messages
+    label = tk.Label(agent_ui, text="Conversation history", bg="#444", fg="#FFD700")
+    label.place(x=5, y=30)
+    messages = ScrolledText(agent_ui, height=5, width=85, wrap=tk.WORD, bg="#666", fg="white")
+    messages.place(x=5, y=55)
+
+    # send message to agent
+    label = tk.Label(agent_ui, text="Query", bg="#444", fg="#FFD700")
+    label.place(x=5, y=155)
+    query_input = tk.Text(agent_ui, height=1, width=70, bg="#666")
+    query_input.place(x=5, y=175)
+
+    # send button
+    agent_start = tk.Button(
+        agent_ui,
+        text="Send",
+        command=lambda: agent.query_agent(query_input.get("1.0", "end-1c")),
+        bg="#444",
+        fg="white"
+    )
+
+    agent_start.place(x=650, y=175)
+
+def start_agent(name, main):
+    if name not in main.running_agents:
         agent_info = available_agents[name]
 
         agent = Agent(
@@ -180,6 +221,7 @@ def start_agent(name, main):
 
         agent.start_agent()
         main.running_agents.append(agent)
+        render_agent_ui(agent, main)
 
 def setup_left_panel(window, left_panel, sqlite_db, main):
     global main_window, db, available_agents

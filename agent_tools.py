@@ -1,4 +1,4 @@
-from pydantic_ai import RunContext
+from pydantic_ai import Agent, RunContext
 import requests
 
 def get_weather(ctx: RunContext[None], city: str):

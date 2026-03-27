@@ -7,6 +7,8 @@ class Main():
     def __init__(self):
         self.db = Database()
         self.running_agents = []
+        self.left_panel = None
+        self.right_panel = None
         self.setup_gui()
 
     def setup_gui(self):
@@ -27,6 +29,7 @@ class Main():
             width=300
         )
 
+        self.left_panel = leftPane
         leftPane.pack_propagate(False)
         leftPane.pack(side="left", fill="both")
 
@@ -52,6 +55,7 @@ class Main():
             width=724
         )
 
+        self.right_panel = rightPane
         rightPane.pack_propagate(False)
         rightPane.pack(side="right", fill="both")
 
