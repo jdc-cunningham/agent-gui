@@ -30,6 +30,8 @@ class Agent():
         self.agent = self.start_agent()
         self.messages = []
         self.msg_frame = None
+        self.response = []
+        self.root = None
 
     def get_model(self, model_name: str):
         match model_name:
@@ -62,17 +64,21 @@ class Agent():
             tools=tools_list
         )
 
+    def render_response(self):
+        self.msg_frame.insert(tk.END, self.response[0] + " ")
+        self.msg_frame.see(tk.END)
+        self.response = self.response[1:]
+
+        if len(self.response):
+            self.root.after(100, self.render_response)
+        else:
+            self.msg_frame.insert(tk.END, "\n")
+
     def query_agent(self, msg: str):
         self.messages.append(msg)
         self.msg_frame.insert(tk.END, msg + "\n")
         self.msg_frame.insert(tk.END, "Thinking..." + "\n")
         result = self.agent.run_sync(msg)
         self.messages.append(result.output)
-
-        result_chunks = result.output.split(" ")
-
-        for chunk in result_chunks:
-            self.msg_frame.insert(tk.END, chunk + " ")
-            time.sleep(0.3)
-
-        self.msg_frame.insert(tk.END, "\n")
+        self.response = result.output.split(" ")
+        self.render_response()

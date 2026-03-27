@@ -5,6 +5,7 @@ import tkinter as tk
 
 class Main():
     def __init__(self):
+        self.root = None
         self.db = Database()
         self.running_agents = []
         self.left_panel = None
@@ -14,6 +15,7 @@ class Main():
     def setup_gui(self):
         # setup window
         main_window = tk.Tk()
+        self.root = main_window
         main_window.configure(background="black")
         main_window.geometry("1024x600")
         main_window.title("Agent GUI")

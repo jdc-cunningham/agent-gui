@@ -221,6 +221,7 @@ def start_agent(name, main):
             agent_info["tools"]
         )
 
+        agent.root = main.root
         agent.start_agent()
         main.running_agents.append(agent)
         render_agent_ui(agent, main)
