@@ -7,6 +7,7 @@ db = None
 main_window = None
 add_agent_modal_visible = False
 add_agent_modal = None
+available_agents = {}
 
 def show_add_agent_modal():
     global add_agent_modal # possibly bad, can use class instead
@@ -92,11 +93,24 @@ def add_agent():
     else:
         show_add_agent_modal()
 
-def start_agent(name):
-    print("run")
+def start_agent(name, main):
+    global running_agents
 
-def setup_left_panel(window, left_panel, sqlite_db):
-    global main_window, db
+    if name not in running_agents:
+        agent_info = available_agents[name]
+
+        agent = Agent(
+            agent_info["name"],
+            agent_info["model"],
+            agent_info["prompt"],
+            agent_info["tools"]
+        )
+
+        agent.start_agent()
+        main.running_agents.append(agent)
+
+def setup_left_panel(window, left_panel, sqlite_db, main):
+    global main_window, db, available_agents
     main_window = window
     db = sqlite_db
 
@@ -104,6 +118,13 @@ def setup_left_panel(window, left_panel, sqlite_db):
     agents = db.get_agents()
 
     for agent in agents:
+        available_agents[agent[0]] = {
+            "name": agent[0],
+            "model": agent[1],
+            "prompt": agent[2],
+            "tools": agent[3]
+        }
+
         agent_frame = tk.Frame(
             left_panel,
             bg="#222",
@@ -126,7 +147,7 @@ def setup_left_panel(window, left_panel, sqlite_db):
         agent_start = tk.Button(
             agent_frame,
             text="Start",
-            command=lambda: start_agent(agent[0]),
+            command=lambda: start_agent(agent[0], main),
             bg="#222",
             fg="white"
         )

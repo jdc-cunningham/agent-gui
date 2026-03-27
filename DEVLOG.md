@@ -26,6 +26,19 @@ I need to make it work end to end though through the UI
 
 The `run_sync` has me concerned too... maybe it's fine if they're running in separate threads but I may need async await.
 
+- [x] create agent
+- [x] shows up on left side
+- [ ] start it
+- [ ] shows up on right side
+- [ ] right side has an output and input
+- [ ] agent responds/updates box
+
+There something concrete
+
+6:59 PM
+
+Man this thing's structure is nasty, I don't have a vision of what it should be so I'm just making things as I think of it
+
 
 
 ---
