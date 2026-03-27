@@ -11,6 +11,7 @@ from pydantic_ai.models.openai import OpenAIChatModel
 # from pydantic_ai.providers.mistral import MistralProvider
 # from pydantic_ai.models.mistral import MistralModel
 import os
+import tkinter as tk
 
 load_dotenv()
 
@@ -18,23 +19,6 @@ tool_map = {
     "get_weather": get_weather,
     "get_crypto_price": get_crypto_price
 }
-
-def get_model(model_name: str):
-    match model_name:
-        case "gpt-4.1-mini":
-            provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
-            return OpenAIChatModel(self.model_Name, provider=provider)
-        # case "mistral-medium-2508":
-        #     provider = MistralProvider(api_key=os.getenv("MISTRAL_API_KEY"))
-        #     return MistralModel(self.model_name, provider=provider)
-        case "claude-sonnet-4-6":
-            provider = AnthropicProvider(api_key=os.getenv("ANTHROPIC_API_KEY"))
-            return AnthropicModel(self.model_name, provider=provider)
-        case "gemini-2.5-flash":
-            provider = GoogleProvider(api_key=os.getenv("GOOGLE_API_KEY"))
-            return GoogleModel(self.model_name, provider=provider)
-        case _:
-            return None
 
 class Agent():
     def __init__(self, agent_name, model_name, agent_prompt, agent_tools):
@@ -44,6 +28,24 @@ class Agent():
         self.agent_tools = agent_tools
         self.agent = self.start_agent()
         self.messages = []
+        self.msg_frame = None
+
+    def get_model(self, model_name: str):
+        match model_name:
+            case "gpt-4.1-mini":
+                provider = OpenAIProvider(api_key=os.getenv("OPENAI_API_KEY"))
+                return OpenAIChatModel(self.model_Name, provider=provider)
+            # case "mistral-medium-2508":
+            #     provider = MistralProvider(api_key=os.getenv("MISTRAL_API_KEY"))
+            #     return MistralModel(self.model_name, provider=provider)
+            case "claude-sonnet-4-6":
+                provider = AnthropicProvider(api_key=os.getenv("ANTHROPIC_API_KEY"))
+                return AnthropicModel(self.model_name, provider=provider)
+            case "gemini-2.5-flash":
+                provider = GoogleProvider(api_key=os.getenv("GOOGLE_API_KEY"))
+                return GoogleModel(self.model_name, provider=provider)
+            case _:
+                return None
 
     def start_agent(self):
         model = self.get_model(self.model_name)
@@ -60,5 +62,9 @@ class Agent():
         )
 
     def query_agent(self, msg: str):
+        self.messages.append(msg)
+        self.msg_frame.insert(tk.END, msg + "\n")
+        self.msg_frame.insert(tk.END, "Thinking..." + "\n")
         result = self.agent.run_sync(msg)
-        print(result.output)
+        self.messages.append(result.output)
+        self.msg_frame.insert(tk.END, result.output + "\n")

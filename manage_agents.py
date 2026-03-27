@@ -174,7 +174,7 @@ def render_agent_ui(agent, main):
         height="220"
     )
 
-    agent_ui.place(x=5, y=((len(main.running_agents) - 1) * 200) + 5)
+    agent_ui.place(x=5, y=((len(main.running_agents) - 1) * 200) + 10)
 
     add_agent_label = tk.Label(
         agent_ui,
@@ -190,11 +190,12 @@ def render_agent_ui(agent, main):
     label.place(x=5, y=30)
     messages = ScrolledText(agent_ui, height=5, width=85, wrap=tk.WORD, bg="#666", fg="white")
     messages.place(x=5, y=55)
+    agent.msg_frame = messages
 
     # send message to agent
     label = tk.Label(agent_ui, text="Query", bg="#444", fg="#FFD700")
     label.place(x=5, y=155)
-    query_input = tk.Text(agent_ui, height=1, width=70, bg="#666")
+    query_input = tk.Text(agent_ui, height=1, width=78, bg="#666", fg="white")
     query_input.place(x=5, y=175)
 
     # send button

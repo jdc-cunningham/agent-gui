@@ -31,7 +31,7 @@ The `run_sync` has me concerned too... maybe it's fine if they're running in sep
 - [x] start it
 - [x] shows up on right side
 - [x] right side has an output and input
-- [ ] agent responds/updates box
+- [x] agent responds/updates box
 
 There something concrete
 
@@ -56,6 +56,22 @@ Then when I push "start" on an agent I have to wait about 3 seconds for it to st
 9:08 PM
 
 Need to eat, I realized I messed up the model selection part, need to add another dependency oh boy
+
+10:01 PM
+
+Alright back on, I skipped mistral for now
+
+Seems like these aditional imports make the app take longer to start, it's at 24 seconds now
+
+10:15 PM
+
+Okay so at this point I have a basic agent that can use a crypto price check tool
+
+I did see a bug when rendering multiple agents on the right side, I'll look at that
+
+Let's see what happens when I add another agent...
+
+Opens the same one, thinks I clicked last agent interesting
 
 ---
 
