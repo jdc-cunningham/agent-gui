@@ -11,6 +11,7 @@ from pydantic_ai.models.openai import OpenAIChatModel
 # from pydantic_ai.providers.mistral import MistralProvider
 # from pydantic_ai.models.mistral import MistralModel
 import os
+import time
 import tkinter as tk
 
 load_dotenv()
@@ -67,4 +68,11 @@ class Agent():
         self.msg_frame.insert(tk.END, "Thinking..." + "\n")
         result = self.agent.run_sync(msg)
         self.messages.append(result.output)
-        self.msg_frame.insert(tk.END, result.output + "\n")
+
+        result_chunks = result.output.split(" ")
+
+        for chunk in result_chunks:
+            self.msg_frame.insert(tk.END, chunk + " ")
+            time.sleep(0.3)
+
+        self.msg_frame.insert(tk.END, "\n")

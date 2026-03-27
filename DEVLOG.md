@@ -73,6 +73,18 @@ Let's see what happens when I add another agent...
 
 Opens the same one, thinks I clicked last agent interesting
 
+11:04 PM
+
+Well... I wanted to end it today but I guess not
+
+It's odd, there's no delay on the render... it just does it all at once
+
+I'm thinking it's a threading issue (that I'm not using threads currently)
+
+But anyway there are bugs still to address and missing features, I'd also like to add other things like news and reddit... something more useful than crypto prices lol
+
+Also auto scroll
+
 ---
 
 ### 03/25/2026
