@@ -9,7 +9,7 @@ add_agent_modal_visible = False
 add_agent_modal = None
 available_agents = {}
 
-def show_add_agent_modal():
+def show_add_agent_modal(db, left_panel, available_agents, main):
     global add_agent_modal # possibly bad, can use class instead
 
     # setup frame and label
@@ -79,19 +79,91 @@ def show_add_agent_modal():
             last_used=""
         )
 
+        cancel_agent_add()
+        render_agent_list(db, left_panel, available_agents, main)
+
     # buttons
     cancel_button = tk.Button(add_agent_modal, text="Cancel", command=cancel_agent_add)
     cancel_button.place(relx=0.865, rely=0.02)
     add_button = tk.Button(add_agent_modal, text="Add", command=add_agent)
     add_button.pack(pady=7)
 
-def add_agent():
+def render_agent_list(db, left_panel, available_agents, main):
+    for agent in available_agents:
+        agent.frame.destroy()
+
+    agents = db.get_agents()
+
+    for agent in agents:
+        agent_frame = tk.Frame(
+            left_panel,
+            bg="#222",
+            width="280",
+            height="70"
+        )
+
+        available_agents[agent[0]] = {
+            "name": agent[0],
+            "model": agent[1],
+            "prompt": agent[2],
+            "tools": agent[3],
+            "frame": agent_frame
+        }
+
+        agent_frame.pack_propagate(False)
+        agent_frame.pack(padx=0, pady=(2, 0))
+
+        agent_name = tk.Label(
+            agent_frame,
+            text=f"Agent: {agent[0]}",
+            bg="#222",
+            fg="white"
+        )
+
+        agent_name.pack(padx=(5, 0), pady=(2, 0), side="top", anchor="nw")
+
+        agent_delete = tk.Button(
+            agent_frame,
+            text="Delete",
+            command=lambda: delete_agent(agent[0], main),
+            bg="#222",
+            fg="white"
+        )
+
+        agent_delete.pack(padx=5, pady=5)
+
+        agent_start = tk.Button(
+            agent_frame,
+            text="Start",
+            command=lambda: start_agent(agent[0], main),
+            bg="#222",
+            fg="white"
+        )
+
+        agent_start.pack(padx=5, pady=5)
+
+def add_agent(db, left_panel, available_agents, main):
     global add_agent_modal_visible
 
     if add_agent_modal_visible:
         add_agent_modal.destroy()
     else:
-        show_add_agent_modal()
+        show_add_agent_modal(db, left_panel, available_agents, main)
+
+def delete_agent(name, main):
+    global available_agents
+
+    agent_info = available_agents[name]
+
+    if name in main.running_agents:
+        running_agents.remove(name)
+
+    db.delete_agent(name)
+
+    if name in available_agents:
+        del available_agents[name]
+
+    agent_info["frame"].destroy()
 
 def start_agent(name, main):
     global running_agents
@@ -113,52 +185,13 @@ def setup_left_panel(window, left_panel, sqlite_db, main):
     global main_window, db, available_agents
     main_window = window
     db = sqlite_db
-
-    # load agents from db
-    agents = db.get_agents()
-
-    for agent in agents:
-        available_agents[agent[0]] = {
-            "name": agent[0],
-            "model": agent[1],
-            "prompt": agent[2],
-            "tools": agent[3]
-        }
-
-        agent_frame = tk.Frame(
-            left_panel,
-            bg="#222",
-            width="280",
-            height="70"
-        )
-
-        agent_frame.pack_propagate(False)
-        agent_frame.pack(padx=0, pady=(2, 0))
-
-        agent_name = tk.Label(
-            agent_frame,
-            text=f"Agent: {agent[0]}",
-            bg="#222",
-            fg="white"
-        )
-
-        agent_name.pack(padx=(5, 0), pady=(2, 0), side="top", anchor="nw")
-
-        agent_start = tk.Button(
-            agent_frame,
-            text="Start",
-            command=lambda: start_agent(agent[0], main),
-            bg="#222",
-            fg="white"
-        )
-
-        agent_start.pack(padx=5, pady=5)
+    render_agent_list(db, left_panel, available_agents, main)
 
     # Add agent button
     add_agent_button = tk.Button(
         left_panel,
         text="Add agent",
-        command=add_agent,
+        command=lambda: add_agent(db, left_panel, available_agents, main),
         bg="#000",
         fg="white"
     )

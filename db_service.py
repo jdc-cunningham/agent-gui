@@ -45,8 +45,9 @@ class Database:
             )
 
             con.commit()
-        except Exception:
+        except sqlite3.Error as e:
             print("Row insert failed for agents")
+            print(e)
 
     def get_agents(self):
         con = self.get_con()
@@ -55,26 +56,21 @@ class Database:
         try:
             agents = cur.execute("SELECT * FROM agents")
             return agents.fetchall()
-        except Exception:
+        except sqlite3.Error as e:
             print("Row insert failed for agents")
+            print(e)
 
+    def delete_agent(self, agent_name):
+        con = self.get_con()
+        cur = self.get_cursor()
 
+        try:
+            cur.execute(
+                "DELETE FROM agents WHERE name = ?",
+                [agent_name]
+            )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            con.commit()
+        except sqlite3.Error as e:
+            print(f"Failed to delete agent {agent_name}")
+            print(e)
