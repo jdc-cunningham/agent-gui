@@ -40,6 +40,23 @@ Damn I wasn't putting in the prompts this whole time
 
 Debugging a problem right now where you delete an agent on left sidebar and it throws off the button indexes, tries to start deleted agent
 
+8:42 PM
+
+It's that red skull thing "fix one bug, two more shall rise and take its place"
+
+This one is you are running two agents, you delete one, it tries to delete all
+
+- 2 agents
+- start both
+- delete first
+- deletes both
+
+9:05 PM
+
+Okay the delete, re-render issue is addressed
+
+I'm calling it here, got something usable
+
 ---
 
 ### 03/26/2026

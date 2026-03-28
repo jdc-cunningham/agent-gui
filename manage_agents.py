@@ -90,6 +90,7 @@ def show_add_agent_modal(db, left_panel, available_agents, main):
     add_button = tk.Button(add_agent_modal, text="Add", command=add_agent)
     add_button.pack(pady=7)
 
+# side panel
 def render_agent_list(db, left_panel, available_agents, main):
     for agent in available_agents:
         available_agents[agent]["frame"].destroy()
@@ -163,17 +164,20 @@ def delete_agent(name, main):
 
     agent_info = available_agents[name]
 
-    for agent in list(main.running_agents):
-        main.running_agents[agent].ui_body.destroy()
+    if name in main.running_agents:
+        main.running_agents[name].ui_body.destroy()
         del main.running_agents[name]
 
     db.delete_agent(name)
+    agent_info["frame"].destroy()
 
     if name in available_agents:
         del available_agents[name]
 
-    agent_info["frame"].destroy()
-    agent_info["ui_body"].destroy()
+    for agent in available_agents:
+        if agent in main.running_agents:
+            y_offset = 30 if len(main.running_agents) == 1 else (((len(main.running_agents) - 1) * 200) + 56)
+            main.running_agents[agent].ui_body.place(x=5, y=y_offset)
 
 def render_agent_ui(agent, main):
     agent_ui = tk.Frame(

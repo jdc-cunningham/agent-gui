@@ -1,3 +1,11 @@
+### About
+
+This is a Tkinter desktop-app based agent client using Pydantic AI.
+
+Please note this is exploratory code so the quality is low and it's also a work in progress.
+
+Also, while you could develop the app on the low-powered PC itself, I would recommend developing it on a stronger computer with a big display and hot reload to speed up development. I wrote the youtube branch of this app on a 1080P monitor connected by VGA to the Eee PC 1005HA. This was pretty brutal, every time I would start the app up it took 30 seconds before it rendered the app.
+
 ### Setup
 
 #### Environment credentials
