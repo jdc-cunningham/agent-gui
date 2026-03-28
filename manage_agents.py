@@ -91,7 +91,8 @@ def show_add_agent_modal(db, left_panel, available_agents, main):
 
 def render_agent_list(db, left_panel, available_agents, main):
     for agent in available_agents:
-        agent.frame.destroy()
+        if agent.frame:
+            agent.frame.destroy()
 
     agents = db.get_agents()
 
@@ -136,7 +137,7 @@ def render_agent_list(db, left_panel, available_agents, main):
         agent_start = tk.Button(
             agent_frame,
             text="Start",
-            command=lambda: start_agent(agent[0], main),
+            command=lambda x=agent[0]: start_agent(x, main),
             bg="#222",
             fg="white"
         )

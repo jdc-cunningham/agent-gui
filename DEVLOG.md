@@ -1,3 +1,23 @@
+### 03/27/2026
+
+7:09 PM
+
+Alright time to fix some bugs
+
+When you add another agent it adds the same one...
+
+7:14 PM
+
+Yeah so when I click the first agent in the list, it clicks the last one
+
+Some kind of reference error
+
+7:32 PM
+
+I am a little distracted Friday but I did fix the wrong agent opening
+
+---
+
 ### 03/26/2026
 
 6:14 PM
