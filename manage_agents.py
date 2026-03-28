@@ -163,8 +163,9 @@ def delete_agent(name, main):
 
     agent_info = available_agents[name]
 
-    if name in main.running_agents:
-        running_agents.remove(name)
+    for agent in list(main.running_agents):
+        main.running_agents[agent].ui_body.destroy()
+        del main.running_agents[name]
 
     db.delete_agent(name)
 
@@ -172,6 +173,7 @@ def delete_agent(name, main):
         del available_agents[name]
 
     agent_info["frame"].destroy()
+    agent_info["ui_body"].destroy()
 
 def render_agent_ui(agent, main):
     agent_ui = tk.Frame(
@@ -180,6 +182,8 @@ def render_agent_ui(agent, main):
         width="714",
         height="220"
     )
+
+    agent.ui_body = agent_ui
 
     y_offset = 30 if len(main.running_agents) == 1 else (((len(main.running_agents) - 1) * 200) + 56)
     agent_ui.place(x=5, y=y_offset)
@@ -202,9 +206,9 @@ def render_agent_ui(agent, main):
 
     # send message to agent
     label = tk.Label(agent_ui, text="Query", bg="#444", fg="#FFD700")
-    label.place(x=5, y=155)
+    label.place(x=5, y=160)
     query_input = tk.Text(agent_ui, height=1, width=78, bg="#666", fg="white")
-    query_input.place(x=5, y=175)
+    query_input.place(x=5, y=180)
 
     # this 2-step thing seems dumb
     def query_agent():
@@ -223,7 +227,7 @@ def render_agent_ui(agent, main):
         fg="white"
     )
 
-    agent_start.place(x=650, y=175)
+    agent_start.place(x=650, y=180)
 
 def start_agent(name, main):
     if name not in main.running_agents:
@@ -238,7 +242,7 @@ def start_agent(name, main):
 
         agent.root = main.root
         agent.start_agent()
-        main.running_agents.append(agent)
+        main.running_agents[agent.name] = agent
         render_agent_ui(agent, main)
 
 def setup_left_panel(window, left_panel, sqlite_db, main):

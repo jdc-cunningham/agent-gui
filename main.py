@@ -7,7 +7,7 @@ class Main():
     def __init__(self):
         self.root = None
         self.db = Database()
-        self.running_agents = []
+        self.running_agents = {}
         self.left_panel = None
         self.right_panel = None
         self.setup_gui()

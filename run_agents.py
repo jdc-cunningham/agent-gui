@@ -32,6 +32,7 @@ class Agent():
         self.msg_frame = None
         self.response = []
         self.root = None
+        self.ui_body = None
 
     def get_model(self, model_name: str):
         match model_name:
