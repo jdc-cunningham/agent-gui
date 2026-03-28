@@ -134,16 +134,16 @@ def render_agent_list(db, left_panel, available_agents, main):
 
         agent_delete.place(x=5, y=32)
 
-        def start():
-            start_agent(agent[0], main)
+        def start(x):
+            start_agent(x, main)
 
-        def run_start():
-            threading.Thread(target=start).start()
+        def run_start(x):
+            threading.Thread(target=start, args=(x,)).start()
 
         agent_start = tk.Button(
             agent_frame,
             text="Start",
-            command=run_start,
+            command=lambda x=agent[0]: run_start(x),
             bg="#222",
             fg="white"
         )

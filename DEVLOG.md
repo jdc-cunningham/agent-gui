@@ -36,11 +36,9 @@ Delete agent should remove it from right side took
 
 Damn I wasn't putting in the prompts this whole time
 
-7:55 PM
+8:17 PM
 
-Missing stuff
-
-
+Debugging a problem right now where you delete an agent on left sidebar and it throws off the button indexes, tries to start deleted agent
 
 ---
 
