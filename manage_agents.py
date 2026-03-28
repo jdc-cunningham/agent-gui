@@ -2,6 +2,7 @@ from datetime import datetime
 from run_agents import Agent
 from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
+import threading
 import tkinter as tk
 
 db = None
@@ -91,8 +92,7 @@ def show_add_agent_modal(db, left_panel, available_agents, main):
 
 def render_agent_list(db, left_panel, available_agents, main):
     for agent in available_agents:
-        if agent.frame:
-            agent.frame.destroy()
+        available_agents[agent]["frame"].destroy()
 
     agents = db.get_agents()
 
@@ -127,17 +127,23 @@ def render_agent_list(db, left_panel, available_agents, main):
         agent_delete = tk.Button(
             agent_frame,
             text="Delete",
-            command=lambda: delete_agent(agent[0], main),
+            command=lambda x=agent[0]: delete_agent(x, main),
             bg="#222",
             fg="white"
         )
 
         agent_delete.place(x=5, y=32)
 
+        def start():
+            start_agent(agent[0], main)
+
+        def run_start():
+            threading.Thread(target=start).start()
+
         agent_start = tk.Button(
             agent_frame,
             text="Start",
-            command=lambda x=agent[0]: start_agent(x, main),
+            command=run_start,
             bg="#222",
             fg="white"
         )
@@ -200,11 +206,19 @@ def render_agent_ui(agent, main):
     query_input = tk.Text(agent_ui, height=1, width=78, bg="#666", fg="white")
     query_input.place(x=5, y=175)
 
+    # this 2-step thing seems dumb
+    def query_agent():
+        agent.query_agent(query_input.get("1.0", "end-1c"))
+        query_input.delete("1.0", tk.END)
+
+    def run_query():
+        threading.Thread(target=query_agent).start()
+
     # send button
     agent_start = tk.Button(
         agent_ui,
         text="Send",
-        command=lambda: agent.query_agent(query_input.get("1.0", "end-1c")),
+        command=run_query,
         bg="#444",
         fg="white"
     )

@@ -1,5 +1,9 @@
 ### Setup
 
+#### Environment credentials
+
+You will need to add a `.env` file in this folder and put your LLM model provider keys in there as shown in the `.env.example` file.
+
 #### Python virtual env
 
 - `$python3 -m venv .venv`

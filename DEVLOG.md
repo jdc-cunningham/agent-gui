@@ -16,6 +16,32 @@ Some kind of reference error
 
 I am a little distracted Friday but I did fix the wrong agent opening
 
+One glaring error is the event blocking nature of the button click/calling a command
+
+The button depress animation freezes like wth...
+
+I was thinking threading you need a loop... but I guess it could just fire and die off the thread whenever execution is done
+
+7:38 PM
+
+Oh I know what else to add... I need to open the modal so the agent can be modified like the prompt or add tools.
+
+Another future which I don't have is storing agent conversation so the history can be fed back into the agent as context
+
+But I'm not doing that today
+
+Delete agent should remove it from right side took
+
+7:42 PM
+
+Damn I wasn't putting in the prompts this whole time
+
+7:55 PM
+
+Missing stuff
+
+
+
 ---
 
 ### 03/26/2026

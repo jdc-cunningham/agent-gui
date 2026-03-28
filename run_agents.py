@@ -56,11 +56,12 @@ class Agent():
 
         # have to turn string into actual function reference
         for tool in self.agent_tools.split(","):
-            if tool in tool_map:
-                tools_list.append(tool_map[tool])
+            if tool.strip() in tool_map:
+                tools_list.append(tool_map[tool.strip()])
 
         return PydanticAgent(
             model,
+            system_prompt=self.prompt,
             tools=tools_list
         )
 
