@@ -1,5 +1,7 @@
 ### About
 
+<img src="./readme-image.JPG"/>
+
 This is a Tkinter desktop-app based agent client using Pydantic AI.
 
 Please note this is exploratory code so the quality is low and it's also a work in progress.
