@@ -20,7 +20,7 @@ class Database:
         except Exception:
             print("Error: DB agents Exists")
 
-        if not(table_exists):
+        if not table_exists:
             try:
                 cur.execute("CREATE TABLE agents(name, model_name, prompt, tools, created, last_used)")
             except Exception:
