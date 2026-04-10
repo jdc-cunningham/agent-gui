@@ -1,3 +1,13 @@
+### 04/09/2026
+
+10:01 PM
+
+Currently trying to get this running on an ASUS Eee PC 900 which has an Intel Celeron M 900MHz
+
+Problem with rustup and the i686/i386 target
+
+---
+
 ### 03/27/2026
 
 7:09 PM
