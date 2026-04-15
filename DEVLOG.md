@@ -14,6 +14,28 @@ Won't get much done today just wanted to do something... I setup git on this com
 
 Pretty beat at this point and just dealt with my taxes... damn I'm down another 3 grand brutal... which I actually can't pay that so I'll be doing payments. Funny even with six figs I'm check to check.
 
+10:54 PM
+
+My mind's astray (TV On The Radio song)
+
+As I work on this, I just think about soul, heart, passion... in a project. You'll see something and it has soul... like this camera someone made recently called Saturnix... I've made 4 cameras aleady myself and none other than the blue one comes close to that in terms of design. It's like it's elegant... striking, it has soul as I say...
+
+That's what I'm looking for... I'm seeing something in my mind like early 2000s colorful aesthetic but pixelated, semi-transparent... think Cowboy Bebop with the net that Edward dives into.
+
+Something that seems like it has life.
+
+I think too I'm too distracted in general, I always need noise... I'm never just in the moment, in silence... even now as I work on this, I'm trying to find something to play on YouTube.
+
+Gonna enjoy some more of this Super Cub anime... not the plane, a moped thing.
+
+I'm just mentally burned now so I can't code... I figure I cna code after I come home from the gym around 6:30 PM before I eat by 9PM. Then unwind after that before sleep.
+
+I haven't taken my camera out in a bit so I'm looking forward to that this weekend.
+
+Gonna really try and not spend any more money because yeah I'm broke af now... I still have to pay 2024 taxes too. I put it off because of all the sidegigs I did... that I have to tabulate and account for.
+
+Ooh I really like this keyboard... funny I'm watching this battery charge up, it's at 12% now and I'm like "no..." I just bought another battery and you're saying maybe this one is fine?
+
 ---
 
 ### 04/09/2026
