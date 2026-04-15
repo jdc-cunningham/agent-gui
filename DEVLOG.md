@@ -1,3 +1,21 @@
+### 04/14/2026
+
+10:32 PM
+
+Man... I really like this laptop's keyboard the ASUS 1000HA. I ordered another battery... for it. Since the current battery only goes up to around 10% capacity. I actually bought one already and it was bad... waste of $30.
+
+It turns out the ASUS 901 uses the same battery so that's what I got, $20 maybe it's also dead... idk, it's funny even if these laptops end up just sitting somewhere unused, I can't let go of the battery not working.
+
+But yeah... for the AUS 900 I've been trying to build the python wheel temporalio and it's failed a few times now running overnight...
+
+So I figure it's time I just commit to using C++ and GTK. I use C++ for my robotics/hardware projects so would be good to get better at it.
+
+Won't get much done today just wanted to do something... I setup git on this computer (typing on it now the 1000HA) and got Kate setup...
+
+Pretty beat at this point and just dealt with my taxes... damn I'm down another 3 grand brutal... which I actually can't pay that so I'll be doing payments. Funny even with six figs I'm check to check.
+
+---
+
 ### 04/09/2026
 
 10:01 PM
