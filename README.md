@@ -6,4 +6,4 @@ A browser in that it can look things up and render the results/images.
 
 Variants:
 
-- [Asus 1005HA (2005) Python Client Agent using PydanticAI]('./python/')
+- [Asus 1005HA (2008) Python Client Agent using PydanticAI](python/)
