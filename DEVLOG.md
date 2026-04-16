@@ -28,6 +28,42 @@ I did fail out of school, like GPA is low 2's... but here I am... six-fig job lo
 
 But now I actually enjoy doing this
 
+I will say I was a phys-eng major for 2 years and then 1 year I tried to switch into computer science
+
+I learned some things
+
+8:37 PM
+
+I will say, I didn't fail because I was dumb, I partied too much and didn't also get the work done.
+
+When I was new in college I was getting A's/B's in my calc classes granted these are easy classes but later on yeah... I just got worse and worse as a student. I had an English class where attendance was mandatory and if you missed 3 days you automatically failed the course... that happened. Walked out on my thermo exam as I didn't study and thought I deserved to fail.
+
+I also didn't like the grade rounding even though it was in my favor.
+
+Anyway... really what I wish I learned was how money is freedom in the sense that if you don't have debts... you are free... living within your means as they say.
+
+Alright focusing...
+
+I hate the way this code is formatted lmao on the docs
+
+8:41 PM
+
+One more thing... I remember trying to do this C in 24 hrs online website... I made it to like hour 18 then I fell asleep.
+
+I also tried to learn programming a few times, I was at a meat processing factory and I would try to learn Android through my phone/notebook...
+
+2015 or 2016 I almost got hired/landed a job but I didn't have a car. It was a written PHP/MySQL exam, crazy, and I destroyed it, like wrote the related tables and everything.
+
+I wouldn't get my first real web dev job until 2018.
+
+This guy writing his memoirs over here
+
+Alright time to compile this hello world example
+
+8:55 PM
+
+Installing deps
+
 ---
 
 ### 04/14/2026
