@@ -1,3 +1,13 @@
+### 04/15/2026
+
+8:21 PM
+
+The new dev setup
+
+<img src="./devlog-images/gtk-dev-on-asus-eee-pc-1000ha.JPG"/>
+
+---
+
 ### 04/14/2026
 
 10:32 PM
