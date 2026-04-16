@@ -6,6 +6,28 @@ The new dev setup
 
 <img src="./devlog-images/gtk-dev-on-asus-eee-pc-1000ha.JPG"/>
 
+8:23 PM
+
+I won't get too much done today. The battery is bad, somewhat thankfully so that other one I ordered won't be in vain... I wonder though what if it's also bad.
+
+Mmm this keyboard feels good.
+
+I went to Aldi's today, it's not bad, they got everything there for the most part, I think missing like cat litter
+
+Will see if I actually save money shopping there
+
+8:31 PM
+
+It's funny like 12 years ago I was in a Java 101 class and I wasn't really into programming...
+
+I did it to get by. 2 years before that, similar/worse, I was in a C++ class, didn't really know what was going on.
+
+Just did it to get by.
+
+I did fail out of school, like GPA is low 2's... but here I am... six-fig job lol but also almost six-fig of debt.
+
+But now I actually enjoy doing this
+
 ---
 
 ### 04/14/2026
