@@ -29,7 +29,7 @@ You will need to add a `.env` file in this folder and put your LLM model provide
 
 I'm using Debian 12
 
-- `$sudo apt install pkg-config build-essential python3-dev python3-tk`
+- `$sudo apt install pkg-config build-essential python3-dev python3-tk libss-devl`
 - `$sudo apt install curl`
 - `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 - `$sudo apt install protobuf-compiler`
