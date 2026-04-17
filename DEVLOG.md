@@ -1,3 +1,13 @@
+### 04/16/2026
+
+9:09 PM
+
+I didn't feel like doing anything today
+
+I am gonna try and compile the hello world on the ASUS Eee PC 900 see how that goes
+
+---
+
 ### 04/15/2026
 
 8:21 PM
@@ -63,6 +73,14 @@ Alright time to compile this hello world example
 8:55 PM
 
 Installing deps
+
+9:08 PM
+
+Let's gooooooooo
+
+<img src="./devlog-images/gtk-hello.JPG"/>
+
+Next step raising a Series B
 
 ---
 
