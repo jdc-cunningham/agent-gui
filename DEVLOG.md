@@ -6,6 +6,20 @@ I didn't feel like doing anything today
 
 I am gonna try and compile the hello world on the ASUS Eee PC 900 see how that goes
 
+10:20 PM
+
+That's interesting the binary I compiled on the ASUS Eee PC 1000HA works on the 900... hmm.
+
+I mean that's good... but I was trying to see how hard it would be to compile on the 900.
+
+Probably negligible with how basic this agent client will be... but I must try...
+
+I guess it's because they're both x86 interesting...
+
+Oh man typing on this 900 sucks... the keyboard is too small
+
+But yeah I compiled that's cool, didn't take long couple seconds
+
 ---
 
 ### 04/15/2026
